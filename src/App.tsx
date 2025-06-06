@@ -1,16 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "@/components/ui/toaster";
-import Login from "./pages/Login";
+import React from "react";
+import { Calculator } from "./components/Calculator";
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <Toaster />
-    </BrowserRouter>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <Calculator />
+    </div>
   );
 }
 
