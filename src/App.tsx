@@ -1,9 +1,17 @@
-import { Calculator } from "./components/Calculator";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
+import Login from "./pages/Login";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <Calculator />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div>Home Page</div>} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      <Toaster />
+    </BrowserRouter>
   );
 }
+
+export default App;
